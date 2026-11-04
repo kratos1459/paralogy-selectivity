@@ -16,7 +16,8 @@
 
 ## Done computationally since the first draft
 * Re-implemented scaffold/LPO/anchor pipeline (matches manuscript), noise ceiling, chronological split.
-* Tried empirical-Bayes anchor shrinkage: negative (naive version); nested-CV version not yet done.
+* Empirical-Bayes anchor calibration with nested publication-level CV: significantly better than the plain offset at every anchor count (1 anchor: R² 0.26 to 0.41). This is the one method-level result and the strongest candidate for a higher tier; it should be validated on held-out pairs/families and with a fully uncapped training set.
+* Stronger learners (GBM, MLP, ensemble, series-centred) do not beat RF; Ki/Kd vs IC50 stratification keeps the publication effect (0.56 / 0.66).
 * Tried to separate random error from protocol offset using within-publication record variance: inconclusive (repeated records within a publication mix different assay variants), so not shipped. Needs assay descriptors.
 
 ## Still requires something other than conversation-level compute

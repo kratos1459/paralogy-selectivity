@@ -1,6 +1,17 @@
 cff-version: 1.2.0
-message: "If you use this, please cite the PARALOG manuscript (details to be added) and ChEMBL."
-title: "PARALOG: variance components of paralog-selectivity data"
+message: "If you use this repository, please cite the associated manuscript (details to be added on publication) and ChEMBL."
+title: "PARALOG: evaluation protocol and learnability of paralog selectivity (ChEMBL 37)"
 authors:
-  - name: "PARALOG authors"
+  - family-names: "Al Arian"
+    given-names: "Tawsif"
+    affiliation: "Department of Pharmacy, Jahangirnagar University, Savar, Dhaka-1342, Bangladesh"
+  - family-names: "Akter"
+    given-names: "Most. Afrin"
+    affiliation: "Department of Pharmacy, Jahangirnagar University, Savar, Dhaka-1342, Bangladesh"
+  - family-names: "Sakib"
+    given-names: "Md. Shoriful Alam"
+    affiliation: "Department of Biotechnology and Genetic Engineering, Jahangirnagar University, Savar, Dhaka-1342, Bangladesh"
+  - family-names: "Islam"
+    given-names: "Ehsanul"
+    affiliation: "Department of Pharmacy, Jahangirnagar University, Savar, Dhaka-1342, Bangladesh"
 license: MIT

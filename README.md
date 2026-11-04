@@ -25,6 +25,8 @@ Remaining differences (largest: leave-publication-out R² 0.26 vs 0.21) come fro
 3. **Variance split.** About 57% of between-publication variance is protocol offset or noise; the chemical-series component is about 27% of total variance.
 4. **Chronological split** (`05`). Train on publications up to the 75th-percentile year (median cut 2017), test on later ones, excluding test compounds from training: median R² 0.07 (45 pairs), within-series R² 0.02, lower than leave-publication-out.
 
+5. **Naive shrinkage of the anchor offset does not help** (`07`). Shrinking the few-anchor offset by a variance ratio estimated from out-of-bag residuals gave lower pooled R² than the plain offset at 2, 3 and 5 anchors (median 0.28, 0.29, 0.27 vs 0.43, 0.48, 0.52; the plain offset was better in 39 to 47 of 47 pairs). Out-of-bag residuals still carry same-publication information, so the between-publication variance (and hence the shrinkage weight) is underestimated; a proper estimate needs nested publication-level cross-validation. Reported as a negative result.
+
 Per-pair tables: `results/*.csv`; headline numbers: `results/summary.json`, `results/model_summary.json`.
 
 ### Caveats
@@ -43,6 +45,7 @@ python code/03_summarise.py
 python code/04_models_scaffold_vs_lpo.py raw results   # about 15 min on 2 CPUs
 python code/05_time_split.py raw results
 python code/06_ceiling_vs_models.py
+python code/07_anchor_shrinkage.py raw results
 ```
 `data/curated_pX_by_compound_document_target.csv.gz` lets you skip the download: it holds the curated pX per compound, document and target (no SMILES; ChEMBL IDs only).
 

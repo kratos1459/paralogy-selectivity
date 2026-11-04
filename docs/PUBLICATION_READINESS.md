@@ -14,6 +14,14 @@
   4. A method result: for example empirical-Bayes anchor shrinkage that beats offset calibration under the same hold-out.
   5. Re-run of the remaining manuscript analyses (stronger models, stratification, pocket divergence) in this repository so every number is reproducible.
 
+## Done computationally since the first draft
+* Re-implemented scaffold/LPO/anchor pipeline (matches manuscript), noise ceiling, chronological split.
+* Tried empirical-Bayes anchor shrinkage: negative (naive version); nested-CV version not yet done.
+* Tried to separate random error from protocol offset using within-publication record variance: inconclusive (repeated records within a publication mix different assay variants), so not shipped. Needs assay descriptors.
+
+## Still requires something other than conversation-level compute
+* Prospective or single-laboratory data (wet lab or an external panel), pocket-divergence and stronger-model analyses re-run in the repo (possible with more compute time).
+
 ## Known weaknesses a reviewer will raise
 * Documents are a proxy for series and laboratories.
 * Repeat compounds are not representative of series compounds.

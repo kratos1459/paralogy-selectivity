@@ -5,29 +5,34 @@ leave-publication-out (LPO) evaluation of paralog/isoform selectivity models (Ch
 
 ## What this repository reproduces
 
-| Item | Status |
-|---|---|
-| Pair list (51 pairs, from SI Table S1) | `data/pairs.txt`; gene to ChEMBL target mapping in `data/targets_resolved.json` |
-| ChEMBL download | `code/01_fetch_chembl.py` (public API, ChEMBL_37, 2026-05-01) |
-| Between-publication share of selectivity variance | reproduced (`code/02_variance_components.py`) |
-| Protocol/replicate noise and noise ceiling | new analysis, same script |
-| Model results (scaffold-split R2 0.56, LPO R2 0.21, within-series 0.05, anchor calibration) | **not included**: the original model-training pipeline is not part of this release |
+The original 01–16 script pipeline lived in a sandbox that no longer exists, so the model analyses were **re-implemented** from the manuscript's Methods and re-run on a fresh ChEMBL 37 pull. The re-implementation matches the manuscript closely (below). Not re-implemented: XGBoost/MLP/GIN comparison, series-centred and pairwise training, Ki/Kd vs IC50 stratification, and the PDB pocket-divergence analysis.
 
-The earlier files `selectivity.csv` and `features.npz` were not deposited; they contained non-structure tokens in the SMILES column.
+| Quantity | Manuscript | This repository |
+|---|---|---|
+| Scaffold-split R², median (pairs) | 0.56 (49) | 0.54 (49) |
+| Leave-publication-out R², median (pairs) | 0.21 (47) | 0.26 (47) |
+| Within-series R², median | 0.05 | 0.04 |
+| Between-publication variance share, median (IQR) | 65% (54–76%) | 65% (54–76%) |
+| Scaffold-test compounds whose publication is in training | 92% | 92% |
+| Anchor calibration, pooled R² at 0/1/2/3/5 anchors | 0.19/0.20/0.42/0.48/0.52 | 0.26/0.27/0.40/0.46/0.51 |
 
-## Results (50 of 51 pairs analysable; CACNA1C/CACNA1D has no same-publication overlap)
+Remaining differences (largest: leave-publication-out R² 0.26 vs 0.21) come from unrecoverable details such as random seeds, hyperparameters and pair-selection thresholds; the qualitative picture is unchanged.
 
-* Between-publication share of delta variance: median 0.69 (IQR 0.59 to 0.78); manuscript reports 0.65 (0.54 to 0.76).
-* Cross-publication replicate variance of the same compound's delta (protocol plus measurement noise), 30 pairs with at least 20 repeat compounds: median 41% of total variance (IQR 25% to 64%).
-* Noise ceiling for R2 on a held-out publication, 1 - Vx/Vtot: median 0.59 (IQR 0.36 to 0.75); four pairs have a ceiling at or below 0 (BRD4/BRD2, EGFR/ERBB2, CDK2/CDK1, CA2/CA1).
-* Of the between-publication variance, a median 58% is explained by protocol offsets; the remainder (median 27% of total variance) is chemical-series effect.
-* Per-pair values and bootstrap 95% CIs: `results/varcomp_by_pair.csv`; summary: `results/summary.json`.
+## New analyses added here
+
+1. **Noise ceiling** (`02`, `06`). The same compound's selectivity varies across publications; this cross-publication replicate variance (protocol offset plus measurement error) bounds the R² any model can reach on a new publication: ceiling = 1 − Vx/Vtot. Median ceiling 0.63 (IQR 0.37 to 0.71; 30 pairs with at least 20 repeat compounds; four pairs at or below 0).
+2. **Models versus ceiling** (26 pairs with ceiling above 0.05). Leave-publication-out R² is a median 55% of the ceiling and never exceeds it; scaffold-split R² exceeds the ceiling in 6 of 26 pairs, which a real model cannot do, consistent with leakage of publication offsets. Across pairs the ceiling predicts leave-publication-out R² (Spearman 0.73, p = 5e-6).
+3. **Variance split.** About 57% of between-publication variance is protocol offset or noise; the chemical-series component is about 27% of total variance.
+4. **Chronological split** (`05`). Train on publications up to the 75th-percentile year (median cut 2017), test on later ones, excluding test compounds from training: median R² 0.07 (45 pairs), within-series R² 0.02, lower than leave-publication-out.
+
+Per-pair tables: `results/*.csv`; headline numbers: `results/summary.json`, `results/model_summary.json`.
 
 ### Caveats
 1. Repeat compounds are mostly reference or tool compounds and may not represent typical series compounds.
 2. Vx lumps protocol offset with random error; they are not separated here.
 3. Pairs with few repeats have wide CIs; summaries use pairs with at least 20 repeats.
-4. The raw pull (635,280 activity records before curation) gives 375,452 curated compound-document-target values; this differs from the 435,165 measurements reported in the manuscript, whose exact filters were not available, so counts are not expected to match.
+4. The unfiltered pull gives 642k raw records before curation and 375k curated compound-document-target values; the manuscript reports 435,165 measurements for 237,568 compounds, and its exact filters are not recoverable, so counts are not expected to match.
+5. The ceiling comparison uses repeat compounds, mostly reference compounds, and the scaffold analysis uses per-compound median selectivity, so scaffold R² and the ceiling are not strictly like-for-like.
 
 ## Reproduce
 ```
@@ -35,6 +40,9 @@ pip install -r requirements.txt
 python code/01_fetch_chembl.py          # about 30 min, ~300 MB into raw/
 python code/02_variance_components.py   # about 5 min
 python code/03_summarise.py
+python code/04_models_scaffold_vs_lpo.py raw results   # about 15 min on 2 CPUs
+python code/05_time_split.py raw results
+python code/06_ceiling_vs_models.py
 ```
 `data/curated_pX_by_compound_document_target.csv.gz` lets you skip the download: it holds the curated pX per compound, document and target (no SMILES; ChEMBL IDs only).
 

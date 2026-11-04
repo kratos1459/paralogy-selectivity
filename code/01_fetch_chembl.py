@@ -1,5 +1,5 @@
 """Resolve gene symbols (data/pairs.txt) to human ChEMBL SINGLE PROTEIN targets and download
-IC50/Ki/Kd (nM) activities for biochemical (B) and functional (F) assays via the public ChEMBL web API.
+IC50/Ki/Kd (nM) activities for all assay types via the public ChEMBL web API.
 Writes raw/<target>.jsonl (not committed: ~300 MB). Tested against ChEMBL_37 (2026-05-01).
 Note: ADRA1A resolves to two targets; CHEMBL229 (alpha-1A) is selected explicitly."""
 import requests,json,os,time
@@ -31,7 +31,7 @@ def run(t):
     n=0
     with open(fn,'w') as f:
         d=get(API+'activity.json',{'target_chembl_id':t,'standard_type__in':'IC50,Ki,Kd','standard_units':'nM',
-              'assay_type__in':'B,F','only':F,'limit':1000})
+              'only':F,'limit':1000})
         while True:
             for a in d['activities']: f.write(json.dumps(a)+'\n'); n+=1
             if not d['page_meta']['next']: break

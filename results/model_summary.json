@@ -1,0 +1,28 @@
+{
+ "scaffold_R2_median": 0.5426165557471403,
+ "scaffold_pairs": 49,
+ "lpo_R2_median": 0.256720835393167,
+ "lpo_pairs": 47,
+ "within_series_R2_median": 0.0407417941961575,
+ "between_pub_share_median": 0.6510869631961603,
+ "between_pub_share_IQR": [
+  0.5382206895957613,
+  0.7614878246284345
+ ],
+ "scaffold_leakage_median": 0.9156876839723248,
+ "anchor0_R2_median": 0.2567208353931671,
+ "anchor1_R2_median": 0.2728640674442358,
+ "anchor2_R2_median": 0.3987201480146934,
+ "anchor3_R2_median": 0.4594406798625485,
+ "anchor5_R2_median": 0.5056873954848317,
+ "time_split_pairs": 45,
+ "time_split_R2_median": 0.0711565754281989,
+ "time_split_within_R2_median": 0.0218697721540248,
+ "ceiling_pairs": 26,
+ "ceiling_median": 0.6466660715769617,
+ "lpo_over_ceiling_median": 0.5496318287373225,
+ "pairs_scaffold_R2_above_ceiling": 6,
+ "pairs_lpo_R2_above_ceiling": 0,
+ "spearman_ceiling_vs_lpo_R2": 0.7268075639599554,
+ "spearman_p": 5.4063722869837645e-06
+}

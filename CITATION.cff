@@ -1,0 +1,6 @@
+cff-version: 1.2.0
+message: "If you use this, please cite the PARALOG manuscript (details to be added) and ChEMBL."
+title: "PARALOG: variance components of paralog-selectivity data"
+authors:
+  - name: "PARALOG authors"
+license: MIT

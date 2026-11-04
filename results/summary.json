@@ -1,0 +1,22 @@
+{
+ "pairs_analysed": 50,
+ "between_publication_share_median": 0.6864402225493229,
+ "between_publication_share_IQR": [
+  0.5882159082676007,
+  0.7752785329289055
+ ],
+ "pairs_with_ge20_repeat_compounds": 30,
+ "noise_ratio_Vx_over_Vtot_median": 0.4055315050797941,
+ "noise_ratio_IQR": [
+  0.25496452042952356,
+  0.6386885272253231
+ ],
+ "noise_ceiling_R2_median": 0.5944684949202059,
+ "noise_ceiling_R2_IQR": [
+  0.361311472774677,
+  0.7450354795704764
+ ],
+ "pairs_with_nonpositive_ceiling": 4,
+ "protocol_share_of_between_median": 0.5835742862755482,
+ "series_share_of_total_median": 0.2680728900504227
+}

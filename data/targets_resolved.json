@@ -1,0 +1,560 @@
+{
+ "ABL1": [
+  [
+   "CHEMBL1862",
+   "Tyrosine-protein kinase ABL1"
+  ]
+ ],
+ "ACHE": [
+  [
+   "CHEMBL220",
+   "Acetylcholinesterase"
+  ]
+ ],
+ "ADRA1A": [
+  [
+   "CHEMBL229",
+   "Alpha-1A adrenergic receptor"
+  ]
+ ],
+ "ADRA1B": [
+  [
+   "CHEMBL232",
+   "Alpha-1B adrenergic receptor"
+  ]
+ ],
+ "ADRB1": [
+  [
+   "CHEMBL213",
+   "Beta-1 adrenergic receptor"
+  ]
+ ],
+ "ADRB2": [
+  [
+   "CHEMBL210",
+   "Beta-2 adrenergic receptor"
+  ]
+ ],
+ "AURKA": [
+  [
+   "CHEMBL4722",
+   "Aurora kinase A"
+  ]
+ ],
+ "AURKB": [
+  [
+   "CHEMBL2185",
+   "Aurora kinase B"
+  ]
+ ],
+ "BACE1": [
+  [
+   "CHEMBL4822",
+   "Beta-secretase 1"
+  ]
+ ],
+ "BACE2": [
+  [
+   "CHEMBL2525",
+   "Beta-secretase 2"
+  ]
+ ],
+ "BCHE": [
+  [
+   "CHEMBL1914",
+   "Cholinesterase"
+  ]
+ ],
+ "BRAF": [
+  [
+   "CHEMBL5145",
+   "Serine/threonine-protein kinase B-raf"
+  ]
+ ],
+ "BRD2": [
+  [
+   "CHEMBL1293289",
+   "Bromodomain-containing protein 2"
+  ]
+ ],
+ "BRD4": [
+  [
+   "CHEMBL1163125",
+   "Bromodomain-containing protein 4"
+  ]
+ ],
+ "CA1": [
+  [
+   "CHEMBL261",
+   "Carbonic anhydrase 1"
+  ]
+ ],
+ "CA12": [
+  [
+   "CHEMBL3242",
+   "Carbonic anhydrase 12"
+  ]
+ ],
+ "CA2": [
+  [
+   "CHEMBL205",
+   "Carbonic anhydrase 2"
+  ]
+ ],
+ "CA9": [
+  [
+   "CHEMBL3594",
+   "Carbonic anhydrase 9"
+  ]
+ ],
+ "CACNA1C": [
+  [
+   "CHEMBL1940",
+   "Voltage-dependent L-type calcium channel subunit alpha-1C"
+  ]
+ ],
+ "CACNA1D": [
+  [
+   "CHEMBL4138",
+   "Voltage-dependent L-type calcium channel subunit alpha-1D"
+  ]
+ ],
+ "CDK1": [
+  [
+   "CHEMBL308",
+   "Cyclin-dependent kinase 1"
+  ]
+ ],
+ "CDK2": [
+  [
+   "CHEMBL301",
+   "Cyclin-dependent kinase 2"
+  ]
+ ],
+ "CDK4": [
+  [
+   "CHEMBL331",
+   "Cyclin-dependent kinase 4"
+  ]
+ ],
+ "CDK6": [
+  [
+   "CHEMBL2508",
+   "Cyclin-dependent kinase 6"
+  ]
+ ],
+ "CHEK1": [
+  [
+   "CHEMBL4630",
+   "Serine/threonine-protein kinase Chk1"
+  ]
+ ],
+ "CHEK2": [
+  [
+   "CHEMBL2527",
+   "Serine/threonine-protein kinase Chk2"
+  ]
+ ],
+ "CHRM1": [
+  [
+   "CHEMBL216",
+   "Muscarinic acetylcholine receptor M1"
+  ]
+ ],
+ "CHRM2": [
+  [
+   "CHEMBL211",
+   "Muscarinic acetylcholine receptor M2"
+  ]
+ ],
+ "CHRM3": [
+  [
+   "CHEMBL245",
+   "Muscarinic acetylcholine receptor M3"
+  ]
+ ],
+ "CNR1": [
+  [
+   "CHEMBL218",
+   "Cannabinoid receptor 1"
+  ]
+ ],
+ "CNR2": [
+  [
+   "CHEMBL253",
+   "Cannabinoid receptor 2"
+  ]
+ ],
+ "CREBBP": [
+  [
+   "CHEMBL5747",
+   "CREB-binding protein"
+  ]
+ ],
+ "CTSK": [
+  [
+   "CHEMBL268",
+   "Cathepsin K"
+  ]
+ ],
+ "CTSS": [
+  [
+   "CHEMBL2954",
+   "Cathepsin S"
+  ]
+ ],
+ "DPP4": [
+  [
+   "CHEMBL284",
+   "Dipeptidyl peptidase 4"
+  ]
+ ],
+ "DPP8": [
+  [
+   "CHEMBL4657",
+   "Dipeptidyl peptidase 8"
+  ]
+ ],
+ "DRD2": [
+  [
+   "CHEMBL217",
+   "D(2) dopamine receptor"
+  ]
+ ],
+ "DRD3": [
+  [
+   "CHEMBL234",
+   "D(3) dopamine receptor"
+  ]
+ ],
+ "EGFR": [
+  [
+   "CHEMBL203",
+   "Epidermal growth factor receptor"
+  ]
+ ],
+ "EP300": [
+  [
+   "CHEMBL3784",
+   "Histone acetyltransferase p300"
+  ]
+ ],
+ "ERBB2": [
+  [
+   "CHEMBL1824",
+   "Receptor tyrosine-protein kinase erbB-2"
+  ]
+ ],
+ "EZH1": [
+  [
+   "CHEMBL2189116",
+   "Histone-lysine N-methyltransferase EZH1"
+  ]
+ ],
+ "EZH2": [
+  [
+   "CHEMBL2189110",
+   "Histone-lysine N-methyltransferase EZH2"
+  ]
+ ],
+ "F10": [
+  [
+   "CHEMBL244",
+   "Coagulation factor X"
+  ]
+ ],
+ "F2": [
+  [
+   "CHEMBL204",
+   "Prothrombin"
+  ]
+ ],
+ "FGFR1": [
+  [
+   "CHEMBL3650",
+   "Fibroblast growth factor receptor 1"
+  ]
+ ],
+ "FLT3": [
+  [
+   "CHEMBL1974",
+   "Receptor-type tyrosine-protein kinase FLT3"
+  ]
+ ],
+ "GSK3A": [
+  [
+   "CHEMBL2850",
+   "Glycogen synthase kinase-3 alpha"
+  ]
+ ],
+ "GSK3B": [
+  [
+   "CHEMBL262",
+   "Glycogen synthase kinase-3 beta"
+  ]
+ ],
+ "HDAC1": [
+  [
+   "CHEMBL325",
+   "Histone deacetylase 1"
+  ]
+ ],
+ "HDAC2": [
+  [
+   "CHEMBL1937",
+   "Histone deacetylase 2"
+  ]
+ ],
+ "HDAC6": [
+  [
+   "CHEMBL1865",
+   "Protein deacetylase HDAC6"
+  ]
+ ],
+ "HDAC8": [
+  [
+   "CHEMBL3192",
+   "Histone deacetylase 8"
+  ]
+ ],
+ "HRH3": [
+  [
+   "CHEMBL264",
+   "Histamine H3 receptor"
+  ]
+ ],
+ "HRH4": [
+  [
+   "CHEMBL3759",
+   "Histamine H4 receptor"
+  ]
+ ],
+ "HSP90AA1": [
+  [
+   "CHEMBL3880",
+   "Heat shock protein HSP 90-alpha"
+  ]
+ ],
+ "HSP90AB1": [
+  [
+   "CHEMBL4303",
+   "Heat shock protein HSP 90-beta"
+  ]
+ ],
+ "HTR2A": [
+  [
+   "CHEMBL224",
+   "5-hydroxytryptamine receptor 2A"
+  ]
+ ],
+ "HTR2C": [
+  [
+   "CHEMBL225",
+   "5-hydroxytryptamine receptor 2C"
+  ]
+ ],
+ "JAK1": [
+  [
+   "CHEMBL2835",
+   "Tyrosine-protein kinase JAK1"
+  ]
+ ],
+ "JAK2": [
+  [
+   "CHEMBL2971",
+   "Tyrosine-protein kinase JAK2"
+  ]
+ ],
+ "KDR": [
+  [
+   "CHEMBL279",
+   "Vascular endothelial growth factor receptor 2"
+  ]
+ ],
+ "KIT": [
+  [
+   "CHEMBL1936",
+   "Mast/stem cell growth factor receptor Kit"
+  ]
+ ],
+ "MAOA": [
+  [
+   "CHEMBL1951",
+   "Amine oxidase [flavin-containing] A"
+  ]
+ ],
+ "MAOB": [
+  [
+   "CHEMBL2039",
+   "Amine oxidase [flavin-containing] B"
+  ]
+ ],
+ "MAPK11": [
+  [
+   "CHEMBL3961",
+   "Mitogen-activated protein kinase 11"
+  ]
+ ],
+ "MAPK14": [
+  [
+   "CHEMBL260",
+   "Mitogen-activated protein kinase 14"
+  ]
+ ],
+ "MMP1": [
+  [
+   "CHEMBL332",
+   "Interstitial collagenase"
+  ]
+ ],
+ "MMP13": [
+  [
+   "CHEMBL280",
+   "Collagenase 3"
+  ]
+ ],
+ "MMP2": [
+  [
+   "CHEMBL333",
+   "72 kDa type IV collagenase"
+  ]
+ ],
+ "MMP9": [
+  [
+   "CHEMBL321",
+   "Matrix metalloproteinase-9"
+  ]
+ ],
+ "NOS1": [
+  [
+   "CHEMBL3568",
+   "Nitric oxide synthase 1"
+  ]
+ ],
+ "NOS2": [
+  [
+   "CHEMBL4481",
+   "Nitric oxide synthase, inducible"
+  ]
+ ],
+ "NOS3": [
+  [
+   "CHEMBL4803",
+   "Nitric oxide synthase 3"
+  ]
+ ],
+ "OPRD1": [
+  [
+   "CHEMBL236",
+   "Delta-type opioid receptor"
+  ]
+ ],
+ "OPRK1": [
+  [
+   "CHEMBL237",
+   "Kappa-type opioid receptor"
+  ]
+ ],
+ "OPRM1": [
+  [
+   "CHEMBL233",
+   "Mu-type opioid receptor"
+  ]
+ ],
+ "PARP1": [
+  [
+   "CHEMBL3105",
+   "Poly [ADP-ribose] polymerase 1"
+  ]
+ ],
+ "PARP2": [
+  [
+   "CHEMBL5366",
+   "Poly [ADP-ribose] polymerase 2"
+  ]
+ ],
+ "PDE4B": [
+  [
+   "CHEMBL275",
+   "3',5'-cyclic-AMP phosphodiesterase 4B"
+  ]
+ ],
+ "PDE4D": [
+  [
+   "CHEMBL288",
+   "3',5'-cyclic-AMP phosphodiesterase 4D"
+  ]
+ ],
+ "PDE5A": [
+  [
+   "CHEMBL1827",
+   "cGMP-specific 3',5'-cyclic phosphodiesterase"
+  ]
+ ],
+ "PIK3CA": [
+  [
+   "CHEMBL4005",
+   "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform"
+  ]
+ ],
+ "PIK3CD": [
+  [
+   "CHEMBL3130",
+   "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform"
+  ]
+ ],
+ "PTGS1": [
+  [
+   "CHEMBL221",
+   "Prostaglandin G/H synthase 1"
+  ]
+ ],
+ "PTGS2": [
+  [
+   "CHEMBL230",
+   "Prostaglandin G/H synthase 2"
+  ]
+ ],
+ "RAF1": [
+  [
+   "CHEMBL1906",
+   "RAF proto-oncogene serine/threonine-protein kinase"
+  ]
+ ],
+ "ROCK1": [
+  [
+   "CHEMBL3231",
+   "Rho-associated protein kinase 1"
+  ]
+ ],
+ "ROCK2": [
+  [
+   "CHEMBL2973",
+   "Rho-associated protein kinase 2"
+  ]
+ ],
+ "SCN5A": [
+  [
+   "CHEMBL1980",
+   "Sodium channel protein type 5 subunit alpha"
+  ]
+ ],
+ "SCN9A": [
+  [
+   "CHEMBL4296",
+   "Sodium channel protein type 9 subunit alpha"
+  ]
+ ],
+ "SRC": [
+  [
+   "CHEMBL267",
+   "Proto-oncogene tyrosine-protein kinase Src"
+  ]
+ ],
+ "TYK2": [
+  [
+   "CHEMBL3553",
+   "Non-receptor tyrosine-protein kinase TYK2"
+  ]
+ ]
+}

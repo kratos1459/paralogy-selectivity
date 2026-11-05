@@ -31,6 +31,9 @@ Remaining differences (largest: leave-publication-out R² 0.26 vs 0.21) come fro
 6. **Stronger models do not help** (`09`, 47 pairs, leave-publication-out, same capped training): pooled R² median RF 0.27, gradient boosting 0.17, MLP 0.17, 3-model mean 0.27; within-series R² 0.03, -0.13, -0.11 and 0.00; series-centred RF -0.03 pooled / 0.02 within. This reproduces the manuscript's conclusion (no learner improves within-series ranking).
 7. **Equilibrium versus functional data** (`09`): median between-publication share 0.56 for Ki/Kd (37 pairs) and 0.66 for IC50 (45 pairs); both far above zero, so the publication effect is not an artefact of mixing assay types.
 8. Independent validation of item 5 (`10`; four fresh splits, training capped at 6,000): plain vs EB pooled R² 0.18 vs 0.34 (1 anchor), 0.38 vs 0.46 (2), 0.44 vs 0.47 (3), 0.49 vs 0.50 (5); EB better in 46, 41, 41, 36 of 47 pairs. Figure: `results/figure_ceiling_and_calibration.png` (`11`).
+10. **Closed-form shrinkage theory** (`12`): excess error of the plain offset is sigma^2/m and of the EB offset w*sigma^2/m, w = tau^2/(tau^2+sigma^2/m). Predicted vs observed MSE across pairs: Pearson 0.95 to 0.99 (it modestly overestimates the gain: 0.137 vs 0.117 at one anchor).
+11. **Assay descriptors** (`13`; needs `assays.csv`, fetched from the ChEMBL assay endpoint for the assay IDs in the raw pull): concordant document pairs (same standard type, BAO format, assay type, cell presence, organism) have cross-document variance 0.46 vs 0.57 for discordant pairs (pooled), so recorded descriptors explain about 20% (median 34% per pair) of disagreement; concordant lower in 72% of 36 pairs.
+12. **Single-source document hold-out** (`14`): 47 tests on 34 large documents; base-model R^2 median -0.11 (within-series -0.003), i.e. these documents remain hard. EB beats plain offset in 42 to 44 of 47 tests at every anchor count (m=1: -0.97 to -0.32) but does not make R^2 positive. These documents are large single-source deposits, not verified single-laboratory sets.
 9. Negative result: the naive out-of-bag version of shrinkage (`07`) underperforms the plain offset (0.28 vs 0.43 at 2 anchors) because out-of-bag residuals still carry same-publication information.
 
 Per-pair tables: `results/*.csv`; headline numbers: `results/summary.json`, `results/model_summary.json`.
@@ -55,6 +58,10 @@ python code/07_anchor_shrinkage.py raw results
 python code/09_extra_models_eb_strat.py raw results
 python code/10_eb_validation.py raw results
 python code/11_figure.py
+python code/12_theory_check.py raw results
+# fetch assay descriptors into assays.csv (see code/13_assay_descriptors.py header), then:
+python code/13_assay_descriptors.py
+python code/14_single_document_holdout.py raw results
 ```
 `data/curated_pX_by_compound_document_target.csv.gz` lets you skip the download: it holds the curated pX per compound, document and target (no SMILES; ChEMBL IDs only).
 

@@ -38,3 +38,9 @@
 6. **Positioning and novelty check.** Re-run the literature search before submission; position against matched-pair, assay-noise and temporal-split work.
 7. **Reporting.** Drop the "chosen pairs" limitation by adding a random sample of pairs, add per-family results and confidence intervals everywhere.
 Realistic targets: J Cheminform or JCIM now; Briefings in Bioinformatics or Nature Communications only after items 1 to 4.
+
+## Update after the three extra analyses
+* Theory: closed-form shrinkage predictions match observed error (r 0.95 to 0.99), which turns the calibration from a heuristic into a model-based result.
+* Assay descriptors: recorded descriptors explain only about 20% of cross-document disagreement, so most of the noise ceiling is unrecorded laboratory effects (supports the need for true single-lab or prospective data).
+* Single-document hold-out: base models fail (median R2 -0.11); EB calibration still helps in 42 to 44 of 47 tests. This is the honest weak spot; a reviewer will read it as the external-validity gap. The paper should state it openly and frame calibration as the practical remedy.
+* Still not possible here: genuinely single-laboratory or prospective data, and a Zenodo DOI (needs your account).

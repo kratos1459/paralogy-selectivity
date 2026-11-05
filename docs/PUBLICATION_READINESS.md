@@ -28,3 +28,13 @@
 * Repeat compounds are not representative of series compounds.
 * Pairs are curated, not random, and share targets.
 * Re-implemented model results differ from the original by up to 0.05 in R².
+
+## What is still needed for a high-impact journal (checklist)
+1. **External validity (the main gap).** One of: (a) single-laboratory or standardised-panel data (kinome or safety-panel profiling) showing the ceiling and calibration gains; (b) prospective measurement of a few anchors in a collaborator's lab; (c) a curated external set from after the ChEMBL 37 cutoff.
+2. **Method claim with theory.** Formalise the empirical-Bayes anchor offset (hierarchical model, shrinkage weight, expected R2 gain) and test on pairs and families not used to tune anything.
+3. **Complete, reproducible pipeline.** Re-run XGBoost, a graph network and a pretrained model; pocket-divergence analysis; use the same pipeline for every number in the paper.
+4. **Benchmark release.** Splits, curation code, leaderboard baselines, a Zenodo DOI and a data paper style description.
+5. **Separate protocol offset from error.** Needs assay descriptors (cell line, enzyme construct, substrate, assay format) from ChEMBL assay records.
+6. **Positioning and novelty check.** Re-run the literature search before submission; position against matched-pair, assay-noise and temporal-split work.
+7. **Reporting.** Drop the "chosen pairs" limitation by adding a random sample of pairs, add per-family results and confidence intervals everywhere.
+Realistic targets: J Cheminform or JCIM now; Briefings in Bioinformatics or Nature Communications only after items 1 to 4.

@@ -1,5 +1,7 @@
 # PARALOG: variance components of paralog-selectivity data
 
+Repository: https://github.com/kratos1459/paralogy-selectivity
+
 Code and derived data for the variance-component analysis that accompanies the manuscript on
 leave-publication-out (LPO) evaluation of paralog/isoform selectivity models (ChEMBL 37, 51 target pairs).
 

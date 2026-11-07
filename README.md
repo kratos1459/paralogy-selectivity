@@ -1,5 +1,7 @@
 # PARALOG: variance components of paralog-selectivity data
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24035853.svg)](https://doi.org/10.5281/zenodo.24035853)
+
 Repository: https://github.com/kratos1459/paralogy-selectivity
 
 Code and derived data for the variance-component analysis that accompanies the manuscript on
@@ -72,3 +74,5 @@ python code/16_export_benchmark.py
 
 ## Licence
 Code: MIT. Derived data come from ChEMBL (CC BY-SA 3.0, EMBL-EBI); cite ChEMBL if you reuse them.
+
+17. **Random-pair replication (removes hand-picked-pair bias).** `code/17_sample_random_pairs.py` draws 60 random same-class target pairs (ChEMBL protein-class based, ≥500 records each, excluding the 51 original pairs; seed 1). Outputs in `results/random_pairs/`. On the 45 random pairs passing filters: scaffold-split R² median 0.55, leave-publication-out R² median −0.10, between-publication variance share 0.68–0.70, noise ceiling 0.65, leakage 0.91; anchored (m=2/3/5) R² 0.20/0.26/0.23; EB-vs-plain offset (35 pairs, m=1) 0.31 vs 0.12. The scaffold→LPO collapse and the benefit of anchor calibration replicate on unselected pairs (LPO is lower than for the curated set because random pairs have fewer, smaller documents).

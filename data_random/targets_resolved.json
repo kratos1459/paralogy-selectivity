@@ -1,0 +1,662 @@
+{
+ "CHEMBL3892": [
+  [
+   "CHEMBL3892",
+   "Sphingosine 1-phosphate receptor 3"
+  ]
+ ],
+ "CHEMBL2955": [
+  [
+   "CHEMBL2955",
+   "Sphingosine 1-phosphate receptor 2"
+  ]
+ ],
+ "CHEMBL211": [
+  [
+   "CHEMBL211",
+   "Muscarinic acetylcholine receptor M2"
+  ]
+ ],
+ "CHEMBL1821": [
+  [
+   "CHEMBL1821",
+   "Muscarinic acetylcholine receptor M4"
+  ]
+ ],
+ "CHEMBL4527": [
+  [
+   "CHEMBL4527",
+   "TRAF2 and NCK-interacting protein kinase"
+  ]
+ ],
+ "CHEMBL6166": [
+  [
+   "CHEMBL6166",
+   "Mitogen-activated protein kinase kinase kinase kinase 4"
+  ]
+ ],
+ "CHEMBL4895": [
+  [
+   "CHEMBL4895",
+   "Tyrosine-protein kinase receptor UFO"
+  ]
+ ],
+ "CHEMBL5314": [
+  [
+   "CHEMBL5314",
+   "Tyrosine-protein kinase receptor TYRO3"
+  ]
+ ],
+ "CHEMBL249": [
+  [
+   "CHEMBL249",
+   "Substance-P receptor"
+  ]
+ ],
+ "CHEMBL4429": [
+  [
+   "CHEMBL4429",
+   "Neuromedin-K receptor"
+  ]
+ ],
+ "CHEMBL4478": [
+  [
+   "CHEMBL4478",
+   "Voltage-dependent N-type calcium channel subunit alpha-1B"
+  ]
+ ],
+ "CHEMBL4641": [
+  [
+   "CHEMBL4641",
+   "Voltage-dependent T-type calcium channel subunit alpha-1G"
+  ]
+ ],
+ "CHEMBL2028": [
+  [
+   "CHEMBL2028",
+   "Somatostatin receptor type 3"
+  ]
+ ],
+ "CHEMBL1917": [
+  [
+   "CHEMBL1917",
+   "Somatostatin receptor type 1"
+  ]
+ ],
+ "CHEMBL2148": [
+  [
+   "CHEMBL2148",
+   "Tyrosine-protein kinase JAK3"
+  ]
+ ],
+ "CHEMBL2835": [
+  [
+   "CHEMBL2835",
+   "Tyrosine-protein kinase JAK1"
+  ]
+ ],
+ "CHEMBL4142": [
+  [
+   "CHEMBL4142",
+   "Fibroblast growth factor receptor 2"
+  ]
+ ],
+ "CHEMBL2742": [
+  [
+   "CHEMBL2742",
+   "Fibroblast growth factor receptor 3"
+  ]
+ ],
+ "CHEMBL2069": [
+  [
+   "CHEMBL2069",
+   "Thromboxane A2 receptor"
+  ]
+ ],
+ "CHEMBL1836": [
+  [
+   "CHEMBL1836",
+   "Prostaglandin E2 receptor EP4 subtype"
+  ]
+ ],
+ "CHEMBL2250": [
+  [
+   "CHEMBL2250",
+   "Tyrosine-protein kinase Blk"
+  ]
+ ],
+ "CHEMBL1841": [
+  [
+   "CHEMBL1841",
+   "Tyrosine-protein kinase Fyn"
+  ]
+ ],
+ "CHEMBL209": [
+  [
+   "CHEMBL209",
+   "Serine protease 1"
+  ]
+ ],
+ "CHEMBL244": [
+  [
+   "CHEMBL244",
+   "Coagulation factor X"
+  ]
+ ],
+ "CHEMBL1741207": [
+  [
+   "CHEMBL1741207",
+   "Sentrin-specific protease 8"
+  ]
+ ],
+ "CHEMBL1741215": [
+  [
+   "CHEMBL1741215",
+   "Sentrin-specific protease 6"
+  ]
+ ],
+ "CHEMBL3706": [
+  [
+   "CHEMBL3706",
+   "Disintegrin and metalloproteinase domain-containing protein 17"
+  ]
+ ],
+ "CHEMBL2285": [
+  [
+   "CHEMBL2285",
+   "A disintegrin and metalloproteinase with thrombospondin motifs 5"
+  ]
+ ],
+ "CHEMBL6032": [
+  [
+   "CHEMBL6032",
+   "Histone-lysine N-methyltransferase EHMT2"
+  ]
+ ],
+ "CHEMBL2189110": [
+  [
+   "CHEMBL2189110",
+   "Histone-lysine N-methyltransferase EZH2"
+  ]
+ ],
+ "CHEMBL4618": [
+  [
+   "CHEMBL4618",
+   "Leukotriene A-4 hydrolase"
+  ]
+ ],
+ "CHEMBL2693": [
+  [
+   "CHEMBL2693",
+   "Leucyl-cystinyl aminopeptidase"
+  ]
+ ],
+ "CHEMBL4462": [
+  [
+   "CHEMBL4462",
+   "NAD-dependent protein deacetylase sirtuin-2"
+  ]
+ ],
+ "CHEMBL4506": [
+  [
+   "CHEMBL4506",
+   "NAD-dependent protein deacetylase sirtuin-1"
+  ]
+ ],
+ "CHEMBL2815": [
+  [
+   "CHEMBL2815",
+   "High affinity nerve growth factor receptor"
+  ]
+ ],
+ "CHEMBL4898": [
+  [
+   "CHEMBL4898",
+   "BDNF/NT-3 growth factors receptor"
+  ]
+ ],
+ "CHEMBL226": [
+  [
+   "CHEMBL226",
+   "Adenosine receptor A1"
+  ]
+ ],
+ "CHEMBL256": [
+  [
+   "CHEMBL256",
+   "Adenosine receptor A3"
+  ]
+ ],
+ "CHEMBL2327": [
+  [
+   "CHEMBL2327",
+   "Substance-K receptor"
+  ]
+ ],
+ "CHEMBL1937": [
+  [
+   "CHEMBL1937",
+   "Histone deacetylase 2"
+  ]
+ ],
+ "CHEMBL1829": [
+  [
+   "CHEMBL1829",
+   "Histone deacetylase 3"
+  ]
+ ],
+ "CHEMBL233": [
+  [
+   "CHEMBL233",
+   "Mu-type opioid receptor"
+  ]
+ ],
+ "CHEMBL2014": [
+  [
+   "CHEMBL2014",
+   "Nociceptin receptor"
+  ]
+ ],
+ "CHEMBL224": [
+  [
+   "CHEMBL224",
+   "5-hydroxytryptamine receptor 2A"
+  ]
+ ],
+ "CHEMBL3371": [
+  [
+   "CHEMBL3371",
+   "5-hydroxytryptamine receptor 6"
+  ]
+ ],
+ "CHEMBL4662": [
+  [
+   "CHEMBL4662",
+   "Proteasome Macropain subunit MB1"
+  ]
+ ],
+ "CHEMBL5620": [
+  [
+   "CHEMBL5620",
+   "Proteasome subunit beta type-8"
+  ]
+ ],
+ "CHEMBL1785": [
+  [
+   "CHEMBL1785",
+   "Endothelin receptor type B"
+  ]
+ ],
+ "CHEMBL252": [
+  [
+   "CHEMBL252",
+   "Endothelin-1 receptor"
+  ]
+ ],
+ "CHEMBL325": [
+  [
+   "CHEMBL325",
+   "Histone deacetylase 1"
+  ]
+ ],
+ "CHEMBL2147": [
+  [
+   "CHEMBL2147",
+   "Serine/threonine-protein kinase pim-1"
+  ]
+ ],
+ "CHEMBL5407": [
+  [
+   "CHEMBL5407",
+   "Serine/threonine-protein kinase pim-3"
+  ]
+ ],
+ "CHEMBL1941": [
+  [
+   "CHEMBL1941",
+   "Histamine H2 receptor"
+  ]
+ ],
+ "CHEMBL231": [
+  [
+   "CHEMBL231",
+   "Histamine H1 receptor"
+  ]
+ ],
+ "CHEMBL4852": [
+  [
+   "CHEMBL4852",
+   "Mitogen-activated protein kinase kinase kinase kinase 5"
+  ]
+ ],
+ "CHEMBL5330": [
+  [
+   "CHEMBL5330",
+   "Mitogen-activated protein kinase kinase kinase kinase 2"
+  ]
+ ],
+ "CHEMBL3905": [
+  [
+   "CHEMBL3905",
+   "Tyrosine-protein kinase Lyn"
+  ]
+ ],
+ "CHEMBL4179": [
+  [
+   "CHEMBL4179",
+   "Mitogen-activated protein kinase 9"
+  ]
+ ],
+ "CHEMBL2637": [
+  [
+   "CHEMBL2637",
+   "Mitogen-activated protein kinase 10"
+  ]
+ ],
+ "CHEMBL219": [
+  [
+   "CHEMBL219",
+   "D(4) dopamine receptor"
+  ]
+ ],
+ "CHEMBL234": [
+  [
+   "CHEMBL234",
+   "D(3) dopamine receptor"
+  ]
+ ],
+ "CHEMBL268": [
+  [
+   "CHEMBL268",
+   "Cathepsin K"
+  ]
+ ],
+ "CHEMBL3837": [
+  [
+   "CHEMBL3837",
+   "Procathepsin L"
+  ]
+ ],
+ "CHEMBL3807": [
+  [
+   "CHEMBL3807",
+   "Tyrosine-protein phosphatase non-receptor type 2"
+  ]
+ ],
+ "CHEMBL2889": [
+  [
+   "CHEMBL2889",
+   "Tyrosine-protein phosphatase non-receptor type 22"
+  ]
+ ],
+ "CHEMBL4441": [
+  [
+   "CHEMBL4441",
+   "C-X-C chemokine receptor type 3"
+  ]
+ ],
+ "CHEMBL2010631": [
+  [
+   "CHEMBL2010631",
+   "Atypical chemokine receptor 3"
+  ]
+ ],
+ "CHEMBL210": [
+  [
+   "CHEMBL210",
+   "Beta-2 adrenergic receptor"
+  ]
+ ],
+ "CHEMBL223": [
+  [
+   "CHEMBL223",
+   "Alpha-1D adrenergic receptor"
+  ]
+ ],
+ "CHEMBL1898": [
+  [
+   "CHEMBL1898",
+   "5-hydroxytryptamine receptor 1B"
+  ]
+ ],
+ "CHEMBL225": [
+  [
+   "CHEMBL225",
+   "5-hydroxytryptamine receptor 2C"
+  ]
+ ],
+ "CHEMBL227": [
+  [
+   "CHEMBL227",
+   "Type-1 angiotensin II receptor"
+  ]
+ ],
+ "CHEMBL4607": [
+  [
+   "CHEMBL4607",
+   "Type-2 angiotensin II receptor"
+  ]
+ ],
+ "CHEMBL1913": [
+  [
+   "CHEMBL1913",
+   "Platelet-derived growth factor receptor beta"
+  ]
+ ],
+ "CHEMBL1936": [
+  [
+   "CHEMBL1936",
+   "Mast/stem cell growth factor receptor Kit"
+  ]
+ ],
+ "CHEMBL4608": [
+  [
+   "CHEMBL4608",
+   "Melanocortin receptor 5"
+  ]
+ ],
+ "CHEMBL3795": [
+  [
+   "CHEMBL3795",
+   "Melanocyte-stimulating hormone receptor"
+  ]
+ ],
+ "CHEMBL2996": [
+  [
+   "CHEMBL2996",
+   "Protein kinase C delta type"
+  ]
+ ],
+ "CHEMBL3920": [
+  [
+   "CHEMBL3920",
+   "Protein kinase C theta type"
+  ]
+ ],
+ "CHEMBL4625": [
+  [
+   "CHEMBL4625",
+   "Bcl-2-like protein 1"
+  ]
+ ],
+ "CHEMBL4860": [
+  [
+   "CHEMBL4860",
+   "Apoptosis regulator Bcl-2"
+  ]
+ ],
+ "CHEMBL1741195": [
+  [
+   "CHEMBL1741195",
+   "Enteropeptidase"
+  ]
+ ],
+ "CHEMBL2176771": [
+  [
+   "CHEMBL2176771",
+   "Complement factor D"
+  ]
+ ],
+ "CHEMBL4393": [
+  [
+   "CHEMBL4393",
+   "Macrophage metalloelastase"
+  ]
+ ],
+ "CHEMBL333": [
+  [
+   "CHEMBL333",
+   "72 kDa type IV collagenase"
+  ]
+ ],
+ "CHEMBL264": [
+  [
+   "CHEMBL264",
+   "Histamine H3 receptor"
+  ]
+ ],
+ "CHEMBL3227": [
+  [
+   "CHEMBL3227",
+   "Metabotropic glutamate receptor 5"
+  ]
+ ],
+ "CHEMBL5137": [
+  [
+   "CHEMBL5137",
+   "Metabotropic glutamate receptor 2"
+  ]
+ ],
+ "CHEMBL2335": [
+  [
+   "CHEMBL2335",
+   "Lysosomal Pro-X carboxypeptidase"
+  ]
+ ],
+ "CHEMBL3976": [
+  [
+   "CHEMBL3976",
+   "Dipeptidyl peptidase 2"
+  ]
+ ],
+ "CHEMBL2434": [
+  [
+   "CHEMBL2434",
+   "C-X-C chemokine receptor type 2"
+  ]
+ ],
+ "CHEMBL1868": [
+  [
+   "CHEMBL1868",
+   "Vascular endothelial growth factor receptor 1"
+  ]
+ ],
+ "CHEMBL1955": [
+  [
+   "CHEMBL1955",
+   "Vascular endothelial growth factor receptor 3"
+  ]
+ ],
+ "CHEMBL2107": [
+  [
+   "CHEMBL2107",
+   "C-X-C chemokine receptor type 4"
+  ]
+ ],
+ "CHEMBL1881": [
+  [
+   "CHEMBL1881",
+   "Prostaglandin E2 receptor EP2 subtype"
+  ]
+ ],
+ "CHEMBL3710": [
+  [
+   "CHEMBL3710",
+   "Prostaglandin E2 receptor EP3 subtype"
+  ]
+ ],
+ "CHEMBL4903": [
+  [
+   "CHEMBL4903",
+   "Low molecular weight phosphotyrosine protein phosphatase"
+  ]
+ ],
+ "CHEMBL1795087": [
+  [
+   "CHEMBL1795087",
+   "Ubiquitin carboxyl-terminal hydrolase 1"
+  ]
+ ],
+ "CHEMBL2157850": [
+  [
+   "CHEMBL2157850",
+   "Ubiquitin carboxyl-terminal hydrolase 7"
+  ]
+ ],
+ "CHEMBL5331": [
+  [
+   "CHEMBL5331",
+   "Tyrosine-protein kinase Mer"
+  ]
+ ],
+ "CHEMBL4015": [
+  [
+   "CHEMBL4015",
+   "C-C chemokine receptor type 2"
+  ]
+ ],
+ "CHEMBL4423": [
+  [
+   "CHEMBL4423",
+   "C-C chemokine receptor type 6"
+  ]
+ ],
+ "CHEMBL4073": [
+  [
+   "CHEMBL4073",
+   "Matrilysin"
+  ]
+ ],
+ "CHEMBL217": [
+  [
+   "CHEMBL217",
+   "D(2) dopamine receptor"
+  ]
+ ],
+ "CHEMBL4801": [
+  [
+   "CHEMBL4801",
+   "Caspase-1"
+  ]
+ ],
+ "CHEMBL3468": [
+  [
+   "CHEMBL3468",
+   "Caspase-7"
+  ]
+ ],
+ "CHEMBL4816": [
+  [
+   "CHEMBL4816",
+   "RAC-gamma serine/threonine-protein kinase"
+  ]
+ ],
+ "CHEMBL4282": [
+  [
+   "CHEMBL4282",
+   "RAC-alpha serine/threonine-protein kinase"
+  ]
+ ],
+ "CHEMBL4439": [
+  [
+   "CHEMBL4439",
+   "TGF-beta receptor type-1"
+  ]
+ ],
+ "CHEMBL5311": [
+  [
+   "CHEMBL5311",
+   "Activin receptor type-1-like"
+  ]
+ ]
+}

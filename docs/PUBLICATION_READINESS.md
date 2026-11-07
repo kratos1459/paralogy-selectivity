@@ -28,3 +28,24 @@
 * Repeat compounds are not representative of series compounds.
 * Pairs are curated, not random, and share targets.
 * Re-implemented model results differ from the original by up to 0.05 in R².
+
+## What is still needed for a high-impact journal (checklist)
+1. **External validity (the main gap).** One of: (a) single-laboratory or standardised-panel data (kinome or safety-panel profiling) showing the ceiling and calibration gains; (b) prospective measurement of a few anchors in a collaborator's lab; (c) a curated external set from after the ChEMBL 37 cutoff.
+2. **Method claim with theory.** Formalise the empirical-Bayes anchor offset (hierarchical model, shrinkage weight, expected R2 gain) and test on pairs and families not used to tune anything.
+3. **Complete, reproducible pipeline.** Re-run XGBoost, a graph network and a pretrained model; pocket-divergence analysis; use the same pipeline for every number in the paper.
+4. **Benchmark release.** Splits, curation code, leaderboard baselines, a Zenodo DOI and a data paper style description.
+5. **Separate protocol offset from error.** Needs assay descriptors (cell line, enzyme construct, substrate, assay format) from ChEMBL assay records.
+6. **Positioning and novelty check.** Re-run the literature search before submission; position against matched-pair, assay-noise and temporal-split work.
+7. **Reporting.** Drop the "chosen pairs" limitation by adding a random sample of pairs, add per-family results and confidence intervals everywhere.
+Realistic targets: J Cheminform or JCIM now; Briefings in Bioinformatics or Nature Communications only after items 1 to 4.
+
+## Update after the three extra analyses
+* Theory: closed-form shrinkage predictions match observed error (r 0.95 to 0.99), which turns the calibration from a heuristic into a model-based result.
+* Assay descriptors: recorded descriptors explain only about 20% of cross-document disagreement, so most of the noise ceiling is unrecorded laboratory effects (supports the need for true single-lab or prospective data).
+* Single-document hold-out: base models fail (median R2 -0.11); EB calibration still helps in 42 to 44 of 47 tests. This is the honest weak spot; a reviewer will read it as the external-validity gap. The paper should state it openly and frame calibration as the practical remedy.
+* Still not possible here: genuinely single-laboratory or prospective data, and a Zenodo DOI (needs your account).
+
+## Update (7 Nov)
+* XGBoost re-run (real xgboost): worse than RF (0.14 vs 0.20 pooled; within-series -0.14), matching the manuscript.
+* Benchmark splits released in `benchmark/`; theory derivation in `docs/THEORY.md`.
+* Open items that need you: Zenodo DOI (link the GitHub repo in Zenodo), true single-lab or prospective data, graph-network and pocket-divergence re-runs.

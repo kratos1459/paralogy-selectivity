@@ -29,6 +29,7 @@ for l in open('data/pairs.txt'):
     if a.empty or b.empty: continue
     smi={**sa,**sb}
     m=a.merge(b,on=['molecule_chembl_id','document_chembl_id'],suffixes=('A','B')); m['d']=m.pXA-m.pXB
+    if m.empty: continue
     m=m[m.molecule_chembl_id.map(lambda x: fp(x,smi[x]) is not None)]
     if m.molecule_chembl_id.nunique()<60: continue
     res=dict(pair=f'{A}/{B}',n_rows=len(m),n_mols=m.molecule_chembl_id.nunique(),n_docs=m.document_chembl_id.nunique())

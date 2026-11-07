@@ -44,3 +44,8 @@ Realistic targets: J Cheminform or JCIM now; Briefings in Bioinformatics or Natu
 * Assay descriptors: recorded descriptors explain only about 20% of cross-document disagreement, so most of the noise ceiling is unrecorded laboratory effects (supports the need for true single-lab or prospective data).
 * Single-document hold-out: base models fail (median R2 -0.11); EB calibration still helps in 42 to 44 of 47 tests. This is the honest weak spot; a reviewer will read it as the external-validity gap. The paper should state it openly and frame calibration as the practical remedy.
 * Still not possible here: genuinely single-laboratory or prospective data, and a Zenodo DOI (needs your account).
+
+## Update (7 Nov)
+* XGBoost re-run (real xgboost): worse than RF (0.14 vs 0.20 pooled; within-series -0.14), matching the manuscript.
+* Benchmark splits released in `benchmark/`; theory derivation in `docs/THEORY.md`.
+* Open items that need you: Zenodo DOI (link the GitHub repo in Zenodo), true single-lab or prospective data, graph-network and pocket-divergence re-runs.

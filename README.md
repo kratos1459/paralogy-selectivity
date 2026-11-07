@@ -1,6 +1,6 @@
 # PARALOG: variance components of paralog-selectivity data
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24035853.svg)](https://doi.org/10.5281/zenodo.24035853)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24036155.svg)](https://doi.org/10.5281/zenodo.24036155)
 
 Repository: https://github.com/kratos1459/paralogy-selectivity
 

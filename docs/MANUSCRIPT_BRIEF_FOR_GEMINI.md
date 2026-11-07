@@ -41,7 +41,7 @@
 3. Methods — §1 above, one pipeline throughout (**use the released re-implementation's numbers everywhere**; the original manuscript numbers differ slightly: LPO R² 0.21 vs 0.26).
 4. Results — R1 → R2 → R7 → R3 → R4/R5 → R6 (limitation last, not hidden).
 5. Discussion — implications: report LPO + ceiling; use anchors; ceiling is estimated from repeat (mostly reference) compounds and may be biased; no prospective/external validation.
-6. Conclusions; Data and Software Availability (GitHub, MIT; Zenodo DOI https://doi.org/10.5281/zenodo.24035853); Supporting Information list; Author contributions `[TODO]`; Funding/competing interests `[TODO]`.
+6. Conclusions; Data and Software Availability (GitHub, MIT; Zenodo DOI https://doi.org/10.5281/zenodo.24036155); Supporting Information list; Author contributions `[TODO]`; Funding/competing interests `[TODO]`.
 - Do **not** claim state-of-the-art prediction. Claim: a quantified evaluation audit, a noise-ceiling diagnostic, a calibrated few-shot fix.
 
 ## 5. Known limitations the text must keep

@@ -49,3 +49,6 @@ Realistic targets: J Cheminform or JCIM now; Briefings in Bioinformatics or Natu
 * XGBoost re-run (real xgboost): worse than RF (0.14 vs 0.20 pooled; within-series -0.14), matching the manuscript.
 * Benchmark splits released in `benchmark/`; theory derivation in `docs/THEORY.md`.
 * Open items that need you: Zenodo DOI (link the GitHub repo in Zenodo), true single-lab or prospective data, graph-network and pocket-divergence re-runs.
+
+## Update: random-pair replication
+Hand-picked-pair bias addressed: 60 random same-class pairs (45 pass filters) reproduce the main findings (scaffold R² 0.55 vs LPO −0.10; between-publication share ~0.70; ceiling 0.65; EB calibration beats plain offset at m=1–2). Report as supplementary robustness analysis.

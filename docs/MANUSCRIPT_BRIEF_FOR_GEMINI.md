@@ -41,8 +41,13 @@
 3. Methods — §1 above, one pipeline throughout (**use the released re-implementation's numbers everywhere**; the original manuscript numbers differ slightly: LPO R² 0.21 vs 0.26).
 4. Results — R1 → R2 → R7 → R3 → R4/R5 → R6 (limitation last, not hidden).
 5. Discussion — implications: report LPO + ceiling; use anchors; ceiling is estimated from repeat (mostly reference) compounds and may be biased; no prospective/external validation.
-6. Conclusions; Data and Software Availability (GitHub, MIT; Zenodo DOI https://doi.org/10.5281/zenodo.24036155); Supporting Information list; Author contributions `[TODO]`; Funding/competing interests `[TODO]`.
+6. Conclusions; Data and Software Availability (GitHub, MIT; Zenodo DOI https://doi.org/10.5281/zenodo.24043303); Supporting Information list; Author contributions `[TODO]`; Funding/competing interests `[TODO]`.
 - Do **not** claim state-of-the-art prediction. Claim: a quantified evaluation audit, a noise-ceiling diagnostic, a calibrated few-shot fix.
 
 ## 5. Known limitations the text must keep
 Single database (ChEMBL); median-aggregation of repeated measurements; noise ceiling needs repeat compounds; random pairs: 35/60 usable for LPO; no pretrained/graph models; no external or prospective validation; EB gain vanishes by m=5 on random pairs.
+
+
+## UPDATE (v2): supersedes earlier numbering and numbers
+* Figure order: F1 counts, F2 SD of Δ, F3 evaluation regimes (a to d), F4 ceiling + EB, F5 random pairs, F6 training formulations (+k vs r), F7 pocket divergence (37 pairs; ρ 0.69). GIN is removed everywhere. All numbers are from the released pipeline (scripts 01 to 24); Supporting Information is Tables S1 to S14 and Figures S1 to S2 (code/23).
+* Use `Manuscript_v2_clean.docx` (in `review/`) as the current text.

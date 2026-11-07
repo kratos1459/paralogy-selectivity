@@ -1,6 +1,6 @@
 # PARALOG: variance components of paralog-selectivity data
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24036155.svg)](https://doi.org/10.5281/zenodo.24036155)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24043303.svg)](https://doi.org/10.5281/zenodo.24043303)
 
 Repository: https://github.com/kratos1459/paralogy-selectivity
 
@@ -40,6 +40,12 @@ Remaining differences (largest: leave-publication-out R² 0.26 vs 0.21) come fro
 15. **Benchmark release** (`16`): `benchmark/selectivity_benchmark.csv.gz` (86,006 compound-publication rows, 47 pairs, 64,337 compounds; publication-hold-out labels for five seeds and a chronological split) and `benchmark/compounds.csv.gz` (SMILES). Use the labels to compare new models under the same protocol; report pooled R², within-series R² and R² relative to the noise ceiling.
 16. **Theory**: derivation of the noise ceiling and the empirical-Bayes offset in `docs/THEORY.md`.
 13. Negative result: the naive out-of-bag version of shrinkage (`07`) underperforms the plain offset (0.28 vs 0.43 at 2 anchors) because out-of-bag residuals still carry same-publication information.
+
+17. **Training formulations** (`19`; 47 pairs, LPO, three splits, cap 2,000): standard, series-centred and pairwise training of RF, XGBoost and MLP. Within-series R² median: RF 0.03/0.02/0.01, XGBoost -0.10/-0.06/-0.10, MLP -0.11/-0.10/-0.35 (standard/centred/pairwise). Identity R²_within = 2kr - k²; negative when k > 2r. Output `results/training_formulations_by_pair.csv`, Figure 6.
+18. **Binding-pocket divergence** (`20`, `21`; 37 pairs with PDB ligand-bound structures for both targets): pocket divergence vs SD of Δ, Spearman 0.69 (95% CI 0.47 to 0.83; within-family permutation p = 2e-4; partial 0.61 given sequence divergence); vs LPO R² 0.33 (n.s.). Figure 7, `results/pocket_*`.
+19. **Direct vs difference-of-potency models** (`22`): direct selectivity RF 0.54 vs 0.51 (better in 40/49 pairs, p = 8.8e-9). `results/direct_vs_difference_by_pair.csv`, Figure S2.
+20. **Applicability domain** (`24`): error falls with max Tanimoto similarity to training (MAE 0.69 below 0.4 vs 0.53 at 0.6+), but publication-centred error is flat (0.40 to 0.44); similarity helps the offset, not within-series ranking. `results/applicability_domain_*.csv`.
+21. **Supporting Information** (`23`): `python code/23_build_supporting_information.py SI.docx` builds Tables S1 to S14 and Figures S1 to S2 from `results/`. Main figures: `results/figure3_evaluation_regimes.png`, `figure6_training_formulations.png`, `figure7_pocket_divergence.png`.
 
 Per-pair tables: `results/*.csv`; headline numbers: `results/summary.json`, `results/model_summary.json`.
 

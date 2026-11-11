@@ -14,4 +14,26 @@ authors:
   - family-names: "Islam"
     given-names: "Ehsanul"
     affiliation: "Department of Pharmacy, Jahangirnagar University, Savar, Dhaka-1342, Bangladesh"
+  - family-names: "Yesmine"
+    given-names: "Saquiba"
+    affiliation: "Department of Pharmacy, Jahangirnagar University, Savar, Dhaka-1342, Bangladesh"
 license: MIT
+repository-code: "https://github.com/kratos1459/paralogy-selectivity"
+abstract: "Code, derived data and a publication-hold-out benchmark for auditing how evaluation protocol limits the learnability of paralog/isoform selectivity across 51 curated and 60 random ChEMBL 37 target pairs: variance decomposition, scaffold-split leakage, cross-publication noise ceiling, leave-publication-out evaluation and empirical-Bayes few-shot anchor calibration."
+keywords:
+  - paralog selectivity
+  - isoform selectivity
+  - ChEMBL
+  - QSAR
+  - leave-publication-out
+  - noise ceiling
+preferred-citation:
+  type: article
+  status: in-preparation
+  title: "Evaluation Protocol Limits Learnability of Paralog Selectivity Across ChEMBL Target Pairs"
+  authors:
+    - {family-names: "Al Arian", given-names: "Tawsif"}
+    - {family-names: "Akter", given-names: "Most. Afrin"}
+    - {family-names: "Sakib", given-names: "Md. Shoriful Alam"}
+    - {family-names: "Islam", given-names: "Ehsanul"}
+    - {family-names: "Yesmine", given-names: "Saquiba"}

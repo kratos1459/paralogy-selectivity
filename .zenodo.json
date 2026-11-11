@@ -1,0 +1,15 @@
+{
+  "title": "Evaluation Protocol Limits Learnability of Paralog Selectivity Across ChEMBL Target Pairs: code, derived data and benchmark",
+  "upload_type": "software",
+  "description": "<p>Code, derived data and a benchmark release accompanying the manuscript <em>Evaluation Protocol Limits Learnability of Paralog Selectivity Across ChEMBL Target Pairs</em>.</p><p>Quantitative structure&ndash;activity relationship (QSAR) models of small-molecule selectivity between human paralogs or isoforms are routinely benchmarked with random or scaffold splits that place compounds from the same publication in both training and test sets. Defining selectivity as the same-publication potency difference, the repository audits 51 curated ChEMBL 37 target pairs and 60 randomly sampled same-class pairs. It contains the variance decomposition (between- versus within-publication selectivity variance), the scaffold-split leakage audit, the cross-publication noise ceiling, leave-publication-out and chronological evaluation, the comparison of random forest, gradient boosting, neural-network, series-centred and pairwise training formulations, and the empirical-Bayes few-shot anchor calibration with its closed-form shrinkage theory. A publication-hold-out benchmark (<code>benchmark/</code>) is released so that new models can be compared under the same protocol.</p><p>Note: the original analysis scripts were re-implemented from the manuscript Methods with AI assistance and re-run on a fresh ChEMBL 37 pull; results closely match but are not identical to the manuscript (see README).</p>",
+  "creators": [
+    {"name": "Al Arian, Tawsif", "affiliation": "Department of Pharmacy, Faculty of Biological Sciences, Jahangirnagar University, Savar, Dhaka-1342, Bangladesh"},
+    {"name": "Akter, Most. Afrin", "affiliation": "Department of Pharmacy, Faculty of Biological Sciences, Jahangirnagar University, Savar, Dhaka-1342, Bangladesh"},
+    {"name": "Sakib, Md. Shoriful Alam", "affiliation": "Department of Biotechnology and Genetic Engineering, Faculty of Biological Sciences, Jahangirnagar University, Savar, Dhaka-1342, Bangladesh"},
+    {"name": "Islam, Ehsanul", "affiliation": "Department of Pharmacy, Faculty of Biological Sciences, Jahangirnagar University, Savar, Dhaka-1342, Bangladesh"},
+    {"name": "Yesmine, Saquiba", "affiliation": "Department of Pharmacy, Faculty of Biological Sciences, Jahangirnagar University, Savar, Dhaka-1342, Bangladesh"}
+  ],
+  "keywords": ["paralog selectivity", "isoform selectivity", "ChEMBL", "QSAR", "scaffold split", "leave-publication-out", "noise ceiling", "few-shot calibration", "benchmark"],
+  "license": "MIT",
+  "access_right": "open"
+}

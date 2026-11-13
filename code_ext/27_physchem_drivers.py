@@ -17,7 +17,7 @@ from rdkit.Chem import Descriptors, Crippen, rdMolDescriptors
 from scipy.stats import spearmanr
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
-from common_ext import load_all, matched, lpo_frame, centered, RES, _mol
+from common_ext import SUF, load_all, matched, lpo_frame, centered, RES, _mol
 
 PROPS = {
     "MolWt": Descriptors.MolWt, "cLogP": Crippen.MolLogP, "TPSA": rdMolDescriptors.CalcTPSA,
@@ -91,19 +91,19 @@ for i, pr in enumerate(pairs.itertuples()):
                               sd_within_series=float(np.std(yc))))
     print(f"{i+1} {name}", flush=True)
 
-D = pd.DataFrame(rows); D.to_csv(RES / "physchem_per_pair.csv", index=False)
-B = pd.DataFrame(best_rows); B.to_csv(RES / "physchem_best_property.csv", index=False)
+D = pd.DataFrame(rows); D.to_csv(RES / f"physchem_per_pair{SUF}.csv", index=False)
+B = pd.DataFrame(best_rows); B.to_csv(RES / f"physchem_best_property{SUF}.csv", index=False)
 S = D.groupby("prop").agg(pairs=("pair", "nunique"),
                           median_abs_rho_within=("rho_within", lambda s: float(np.median(np.abs(s)))),
                           median_abs_rho_raw=("rho_raw", lambda s: float(np.median(np.abs(s)))),
                           pairs_perm_p05=("perm_p", lambda s: int((s < 0.05).sum())),
                           pairs_abs_rho_gt_02=("rho_within", lambda s: int((np.abs(s) > 0.2).sum()))
                           ).sort_values("median_abs_rho_within", ascending=False)
-S.to_csv(RES / "physchem_summary.csv")
+S.to_csv(RES / f"physchem_summary{SUF}.csv")
 print(S.round(3).to_string())
 print(B.groupby("best_property").size().sort_values(ascending=False).to_string())
 json.dump(dict(summary=S.round(4).reset_index().to_dict("records"),
                median_r2_best_property=float(B.r2_best_property.median()) if len(B) else None,
                median_r2_all_properties=float(B.r2_all_properties.median()) if len(B) else None,
                best_property_counts=B.groupby("best_property").size().to_dict() if len(B) else {}),
-          open(RES / "physchem_summary.json", "w"), indent=1)
+          open(RES / f"physchem_summary{SUF}.json", "w"), indent=1)

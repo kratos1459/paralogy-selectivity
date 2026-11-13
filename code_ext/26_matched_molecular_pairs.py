@@ -26,7 +26,7 @@ from rdkit import Chem
 from rdkit.Chem import rdMolDescriptors
 from sklearn.metrics import r2_score
 from scipy.stats import spearmanr, wilcoxon
-from common_ext import load_all, matched, lpo_frame, RES, _mol
+from common_ext import SUF, load_all, matched, lpo_frame, RES, _mol
 
 MAX_HEAVY, MIN_CORE_ATOMS, MAX_R_ATOMS = 70, 6, 20
 
@@ -150,7 +150,7 @@ for i, pr in enumerate(pairs.itertuples()):
 
 X = pd.DataFrame(cross)
 if len(X):
-    X.to_csv(RES / "mmp_cross_document_effects.csv", index=False)
+    X.to_csv(RES / f"mmp_cross_document_effects{SUF}.csv", index=False)
     X["abs1"] = X.effect_doc1.abs()
     bins = [0, 0.3, 0.5, 1.0, 2.0, 99]
     X["bin"] = pd.cut(X.abs1, bins, labels=["<0.3", "0.3-0.5", "0.5-1.0", "1.0-2.0", ">2.0"])
@@ -159,12 +159,12 @@ if len(X):
         median_abs_effect_doc1=float(g.abs1.median()), median_abs_effect_doc2=float(g.effect_doc2.abs().median()),
         spearman=float(spearmanr(g.effect_doc1, g.effect_doc2)[0]) if len(g) >= 8 else np.nan,
         shrinkage=float(np.median(np.abs(g.effect_doc2)) / max(np.median(np.abs(g.effect_doc1)), 1e-9)))), include_groups=False)
-    ST.to_csv(RES / "mmp_effect_size_strata.csv")
+    ST.to_csv(RES / f"mmp_effect_size_strata{SUF}.csv")
     print(ST.round(3).to_string())
 
 P = pd.DataFrame(pair_rows)
-P.to_csv(RES / "mmp_per_pair.csv", index=False)
-pd.DataFrame(trans_rows).to_csv(RES / "mmp_top_transformations.csv", index=False)
+P.to_csv(RES / f"mmp_per_pair{SUF}.csv", index=False)
+pd.DataFrame(trans_rows).to_csv(RES / f"mmp_top_transformations{SUF}.csv", index=False)
 if len(P):
     s = dict(n_pairs=int(len(P)),
              median_between_share_transformation=float(P.between_share_transformation.median()),
@@ -181,5 +181,5 @@ if len(P):
              strata=ST.round(3).reset_index().astype(str).to_dict("records") if len(X) else None,
              overall_cross_doc_spearman=float(spearmanr(X.effect_doc1, X.effect_doc2)[0]) if len(X) > 8 else None,
              overall_sign_concordance=float((np.sign(X.effect_doc1) == np.sign(X.effect_doc2)).mean()) if len(X) else None)
-    json.dump(s, open(RES / "mmp_summary.json", "w"), indent=1)
+    json.dump(s, open(RES / f"mmp_summary{SUF}.json", "w"), indent=1)
     print(json.dumps(s, indent=1))

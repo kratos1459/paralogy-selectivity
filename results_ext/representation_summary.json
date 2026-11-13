@@ -1,0 +1,124 @@
+{
+ "summary": [
+  {
+   "representation": "morgan2_plus_descriptors",
+   "pairs": 47,
+   "n_features": 2265,
+   "lpo_r2": 0.2321,
+   "within_r2": 0.0252,
+   "within_rho": 0.2064,
+   "k": 0.4047,
+   "r_centred": 0.2495
+  },
+  {
+   "representation": "morgan3_4096",
+   "pairs": 47,
+   "n_features": 4096,
+   "lpo_r2": 0.2298,
+   "within_r2": 0.024,
+   "within_rho": 0.1805,
+   "k": 0.379,
+   "r_centred": 0.2563
+  },
+  {
+   "representation": "morgan2_2048",
+   "pairs": 47,
+   "n_features": 2048,
+   "lpo_r2": 0.2295,
+   "within_r2": 0.0415,
+   "within_rho": 0.182,
+   "k": 0.395,
+   "r_centred": 0.2508
+  },
+  {
+   "representation": "rdkit_descriptors",
+   "pairs": 47,
+   "n_features": 217,
+   "lpo_r2": 0.2207,
+   "within_r2": -0.008,
+   "within_rho": 0.1785,
+   "k": 0.4253,
+   "r_centred": 0.224
+  },
+  {
+   "representation": "atompair_2048",
+   "pairs": 47,
+   "n_features": 2048,
+   "lpo_r2": 0.2202,
+   "within_r2": 0.0074,
+   "within_rho": 0.1755,
+   "k": 0.4069,
+   "r_centred": 0.2139
+  },
+  {
+   "representation": "torsion_2048",
+   "pairs": 47,
+   "n_features": 2048,
+   "lpo_r2": 0.2159,
+   "within_r2": 0.0289,
+   "within_rho": 0.1791,
+   "k": 0.3977,
+   "r_centred": 0.2375
+  },
+  {
+   "representation": "maccs_167",
+   "pairs": 47,
+   "n_features": 167,
+   "lpo_r2": 0.164,
+   "within_r2": -0.0761,
+   "within_rho": 0.1395,
+   "k": 0.4865,
+   "r_centred": 0.1741
+  }
+ ],
+ "vs_morgan": [
+  {
+   "representation": "morgan3_4096",
+   "n_pairs": 47,
+   "median_delta_lpo": 0.004,
+   "better": 24,
+   "wilcoxon_p": 0.2239,
+   "median_delta_within": -0.0034
+  },
+  {
+   "representation": "atompair_2048",
+   "n_pairs": 47,
+   "median_delta_lpo": -0.02,
+   "better": 14,
+   "wilcoxon_p": 0.003,
+   "median_delta_within": -0.0028
+  },
+  {
+   "representation": "torsion_2048",
+   "n_pairs": 47,
+   "median_delta_lpo": -0.0181,
+   "better": 15,
+   "wilcoxon_p": 0.0103,
+   "median_delta_within": -0.0222
+  },
+  {
+   "representation": "maccs_167",
+   "n_pairs": 47,
+   "median_delta_lpo": -0.093,
+   "better": 4,
+   "wilcoxon_p": 0.0,
+   "median_delta_within": -0.1149
+  },
+  {
+   "representation": "rdkit_descriptors",
+   "n_pairs": 47,
+   "median_delta_lpo": -0.0368,
+   "better": 12,
+   "wilcoxon_p": 0.0003,
+   "median_delta_within": -0.0387
+  },
+  {
+   "representation": "morgan2_plus_descriptors",
+   "n_pairs": 47,
+   "median_delta_lpo": 0.0017,
+   "better": 24,
+   "wilcoxon_p": 0.4917,
+   "median_delta_within": -0.0082
+  }
+ ]
+}

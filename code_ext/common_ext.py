@@ -22,10 +22,17 @@ RES.mkdir(exist_ok=True); FIG.mkdir(exist_ok=True)
 MIN_DOC_COMPOUNDS, MIN_DOCS, MIN_MOLS = 5, 8, 60
 
 
-def load_all():
-    doc = pd.read_csv(DATA / "doc_level.csv.gz")
-    smi = pd.read_csv(DATA / "smiles.csv.gz").set_index("molecule_chembl_id").canonical_smiles.to_dict()
-    pairs = pd.read_csv(DATA / "pairs.csv")
+import os
+COHORT = os.environ.get("PARALOG_COHORT", "curated")
+SUF = "" if COHORT == "curated" else f"_{COHORT}"
+
+
+def load_all(cohort=None):
+    c = cohort or COHORT
+    sfx = "" if c == "curated" else f"_{c}"
+    doc = pd.read_csv(DATA / f"doc_level{sfx}.csv.gz")
+    smi = pd.read_csv(DATA / f"smiles{sfx}.csv.gz").set_index("molecule_chembl_id").canonical_smiles.to_dict()
+    pairs = pd.read_csv(DATA / f"pairs{sfx}.csv")
     return doc, smi, pairs
 
 

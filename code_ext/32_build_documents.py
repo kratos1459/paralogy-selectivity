@@ -82,12 +82,16 @@ if strat is not None:
         f". A median transformation shifts selectivity by {f(mmp.get('median_sd_transformation'))} log units against a "
         f"same-publication selectivity spread of {f(mmp.get('median_sd_selectivity'))}, so single-point modifications "
         f"below roughly one log unit are not resolvable between laboratories.")
+mmpr_pairs = len(rd("mmp_per_pair_random.csv")) if (S / "mmp_per_pair_random.csv").exists() else None
 if mmpr:
-    r1.append(f"The same pattern held on the randomly sampled pairs ({mmpr.get('n_pairs','-')} pairs): "
-              f"between-publication share {f(mmpr.get('median_between_share_selectivity'))} to "
-              f"{f(mmpr.get('median_between_share_transformation'))}, pooled sign concordance "
-              f"{f(100*mmpr.get('overall_sign_concordance',0),0)}%, median transfer R2 "
-              f"{f(mmpr.get('median_r2_transfer'))}.")
+    r1.append(f"The same pattern held on the randomly sampled cohort: of the 60 random pairs, "
+              f"{mmpr.get('n_pairs','-')} had enough same-publication matched pairs to analyse, and in those the "
+              f"between-publication share fell from {f(mmpr.get('median_between_share_selectivity'))} to "
+              f"{f(mmpr.get('median_between_share_transformation'))} (lower in all "
+              f"{mmpr.get('lower_in_pairs','-')} pairs), pooled sign concordance was "
+              f"{f(100*mmpr.get('overall_sign_concordance',0),0)}%, the median transfer R2 was "
+              f"{f(mmpr.get('median_r2_transfer'))}, and the median transformation effect was "
+              f"{f(mmpr.get('median_sd_transformation'))} log units.")
 
 r2 = []
 if physS is not None:
@@ -98,7 +102,10 @@ if physS is not None:
               f"{f(physS.median_abs_rho_raw.max(),3)} for the same correlations computed without centring. The best "
               f"single property explained a median of {f(100*phys.get('median_r2_best_property',0),1)}% of "
               f"within-series selectivity variance and all twelve jointly "
-              f"{f(100*phys.get('median_r2_all_properties',0),1)}%, with no property dominating across pairs.")
+              f"{f(100*phys.get('median_r2_all_properties',0),1)}%, with no property dominating across pairs."
+              + (f" On the randomly sampled pairs the best single property explained "
+                 f"{f(100*phys_r.get('median_r2_best_property',0),1)}% and all twelve "
+                 f"{f(100*phys_r.get('median_r2_all_properties',0),1)}%." if phys_r else ""))
 if pocket is not None:
     pw = pocket[pocket.target == "sd_delta_samedoc"].sort_values("rho", ascending=False)
     top = pw.iloc[0]; worst = pw[pw.feature.str.startswith("mean_")]
@@ -113,6 +120,7 @@ if pocket is not None:
 r3 = []
 if repS is not None and repV is not None:
     repS2 = repS.set_index(repS.columns[0]) if "representation" not in repS.columns else repS.set_index("representation")
+    globals()["repS2"] = repS2
     base = repS2.loc["morgan2_2048"]
     bestrep = repS2.lpo_r2.idxmax()
     sig = repV[(repV.wilcoxon_p < 0.05) & (repV.median_delta_lpo > 0)]
@@ -221,6 +229,68 @@ for p in d.paragraphs:
                     "without exhaustive hyperparameter tuning in the primary benchmark, although nested "
                     "publication-grouped tuning, a training-size ablation and seven molecular representations "
                     "(reported here) did not change the conclusions")
+        break
+
+
+W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+
+
+def set_deep_text(par, text):
+    """Replace a paragraph's visible text even when runs are nested in content controls (w:sdt)."""
+    ts = par._p.findall(f".//{W}t")
+    if not ts:
+        return False
+    ts[0].text = text
+    ts[0].set("{http://www.w3.org/XML/1998/namespace}space", "preserve")
+    for t in ts[1:]:
+        t.text = ""
+    return True
+
+# ---------------------------------------------------------------- chemistry-led title and abstract
+NEW_TITLE = ("Only Ten-Fold Selectivity Changes Reproduce Between Laboratories: Matched-Pair, "
+             "Physicochemical and Binding-Pocket Analysis of Paralog Selectivity Across 111 ChEMBL Target Pairs")
+
+sd_t = f(mmp.get("median_sd_transformation"))
+conc_lo = f(100 * strat.iloc[0].sign_concordance, 0) if strat is not None else "-"
+conc_hi = f(100 * strat.sort_values("median_abs_effect_doc1").iloc[-2].sign_concordance, 0) if strat is not None else "-"
+shr_hi = f(strat.sort_values("median_abs_effect_doc1").iloc[-2].shrinkage) if strat is not None else "-"
+rep_lo, rep_hi = (f(repS2.lpo_r2.min()), f(repS2.lpo_r2.max())) if repS is not None else ("-", "-")
+NEW_ABSTRACT = (
+    "A single substituent change shifts selectivity between two human paralogs by a median of "
+    f"{sd_t} log units, which is the same size as the disagreement between two laboratories measuring the same "
+    "compounds, so most reported structure-selectivity relationships cannot be expected to reproduce. Defining "
+    "selectivity as the same-publication potency difference, we analysed 51 curated and 60 randomly sampled "
+    "ChEMBL 37 target pairs. Matched molecular pairs measured inside one publication remove the publication "
+    f"offset (between-publication variance share {f(mmp.get('median_between_share_selectivity'))} to "
+    f"{f(mmp.get('median_between_share_transformation'))}), yet the same transformation measured in two "
+    f"independent publications agreed in sign only {f(100*mmp.get('overall_sign_concordance',0),0)}% of the time: "
+    f"concordance was {conc_lo}% for effects below 0.3 log units and {conc_hi}% for effects of one to two log "
+    f"units, whose magnitude fell to {shr_hi} of its original value on replication. Selectivity windows widened "
+    "with the number of differing binding-pocket positions rather than the severity of any single substitution, "
+    "and bulk physicochemical properties explained under 5% of within-series selectivity. These limits explain why "
+    "models do not transfer: median random-forest R2 falls from 0.54 under scaffold splitting to 0.26 under "
+    "leave-publication-out evaluation on curated pairs and from 0.55 to -0.10 on random pairs, never exceeding a "
+    f"cross-publication noise ceiling of 0.63, and neither seven molecular representations (median R2 {rep_lo} to "
+    f"{rep_hi}), larger training sets, nor nested hyperparameter tuning closes the gap. Empirical-Bayes "
+    "calibration with one measured anchor compound raises leave-publication-out R2 from 0.18 to 0.34. We "
+    "recommend treating reported selectivity shifts below ten-fold as unconfirmed, and leave-publication-out "
+    "evaluation with noise-ceiling reporting and anchor calibration as standard practice.")
+
+ttl = d.paragraphs[0]
+if "Evaluation Protocol" in ttl.text or "Paralog Selectivity" in ttl.text:
+    set_deep_text(ttl, NEW_TITLE)
+for i, p in enumerate(d.paragraphs):
+    if p.text.strip().upper().startswith("ABSTRACT"):
+        for q in d.paragraphs[i + 1:i + 4]:
+            if "".join(t.text or "" for t in q._p.findall(f".//{W}t")).strip():
+                set_deep_text(q, NEW_ABSTRACT)
+                break
+        break
+for p in d.paragraphs:
+    if p.text.strip().startswith("KEYWORDS"):
+        set_deep_text(p, "KEYWORDS: paralog selectivity; matched molecular pairs; reproducibility; "
+                         "binding-pocket divergence; ChEMBL; leave-publication-out; noise ceiling; "
+                         "few-shot calibration")
         break
 
 d.save(OUT / "Manuscript_revised_with_chemistry.docx")

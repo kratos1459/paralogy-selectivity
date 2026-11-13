@@ -1,0 +1,115 @@
+{
+ "summary": [
+  {
+   "prop": "MolWt",
+   "pairs": 47,
+   "median_abs_rho_within": 0.0539,
+   "median_abs_rho_raw": 0.1615,
+   "pairs_perm_p05": 22,
+   "pairs_abs_rho_gt_02": 2
+  },
+  {
+   "prop": "HeavyAtoms",
+   "pairs": 47,
+   "median_abs_rho_within": 0.0505,
+   "median_abs_rho_raw": 0.1602,
+   "pairs_perm_p05": 20,
+   "pairs_abs_rho_gt_02": 2
+  },
+  {
+   "prop": "MolarRefractivity",
+   "pairs": 47,
+   "median_abs_rho_within": 0.0496,
+   "median_abs_rho_raw": 0.1413,
+   "pairs_perm_p05": 20,
+   "pairs_abs_rho_gt_02": 4
+  },
+  {
+   "prop": "HBA",
+   "pairs": 47,
+   "median_abs_rho_within": 0.0488,
+   "median_abs_rho_raw": 0.1311,
+   "pairs_perm_p05": 17,
+   "pairs_abs_rho_gt_02": 1
+  },
+  {
+   "prop": "AromaticRings",
+   "pairs": 47,
+   "median_abs_rho_within": 0.0484,
+   "median_abs_rho_raw": 0.1294,
+   "pairs_perm_p05": 21,
+   "pairs_abs_rho_gt_02": 0
+  },
+  {
+   "prop": "FractionCSP3",
+   "pairs": 47,
+   "median_abs_rho_within": 0.0476,
+   "median_abs_rho_raw": 0.1651,
+   "pairs_perm_p05": 19,
+   "pairs_abs_rho_gt_02": 0
+  },
+  {
+   "prop": "RotatableBonds",
+   "pairs": 47,
+   "median_abs_rho_within": 0.0403,
+   "median_abs_rho_raw": 0.1063,
+   "pairs_perm_p05": 15,
+   "pairs_abs_rho_gt_02": 1
+  },
+  {
+   "prop": "cLogP",
+   "pairs": 47,
+   "median_abs_rho_within": 0.0382,
+   "median_abs_rho_raw": 0.1493,
+   "pairs_perm_p05": 18,
+   "pairs_abs_rho_gt_02": 1
+  },
+  {
+   "prop": "TPSA",
+   "pairs": 47,
+   "median_abs_rho_within": 0.0373,
+   "median_abs_rho_raw": 0.1275,
+   "pairs_perm_p05": 17,
+   "pairs_abs_rho_gt_02": 2
+  },
+  {
+   "prop": "HBD",
+   "pairs": 47,
+   "median_abs_rho_within": 0.0362,
+   "median_abs_rho_raw": 0.1068,
+   "pairs_perm_p05": 13,
+   "pairs_abs_rho_gt_02": 0
+  },
+  {
+   "prop": "AliphaticRings",
+   "pairs": 47,
+   "median_abs_rho_within": 0.0284,
+   "median_abs_rho_raw": 0.1004,
+   "pairs_perm_p05": 16,
+   "pairs_abs_rho_gt_02": 0
+  },
+  {
+   "prop": "FormalCharge",
+   "pairs": 17,
+   "median_abs_rho_within": 0.0217,
+   "median_abs_rho_raw": 0.026,
+   "pairs_perm_p05": 4,
+   "pairs_abs_rho_gt_02": 0
+  }
+ ],
+ "median_r2_best_property": 0.016650092784409876,
+ "median_r2_all_properties": 0.04816810618296263,
+ "best_property_counts": {
+  "AliphaticRings": 3,
+  "AromaticRings": 4,
+  "FractionCSP3": 9,
+  "HBA": 2,
+  "HBD": 5,
+  "HeavyAtoms": 3,
+  "MolWt": 4,
+  "MolarRefractivity": 4,
+  "RotatableBonds": 2,
+  "TPSA": 6,
+  "cLogP": 5
+ }
+}
